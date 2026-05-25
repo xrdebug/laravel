@@ -14,7 +14,6 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=xrdebug_laravel&metric=security_rating)](https://sonarcloud.io/dashboard?id=xrdebug_laravel)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=xrdebug_laravel&metric=coverage)](https://sonarcloud.io/dashboard?id=xrdebug_laravel)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=xrdebug_laravel&metric=sqale_index)](https://sonarcloud.io/dashboard?id=xrdebug_laravel)
-[![CodeFactor](https://www.codefactor.io/repository/github/xrdebug/laravel/badge)](https://www.codefactor.io/repository/github/xrdebug/laravel)
 
 ## Summary
 

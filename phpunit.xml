@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" colors="true" failOnRisky="true" failOnWarning="true" testdox="false" executionOrder="default" cacheDirectory=".phpunit.cache">
+    <testsuites>
+        <testsuite name="Chevere Test suite">
+            <directory suffix="Test.php">tests/</directory>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <junit outputFile="coverage/logs/junit.xml"/>
+    </logging>
+    <coverage ignoreDeprecatedCodeUnits="true">
+        <report>
+            <clover outputFile="coverage/logs/clover.xml"/>
+            <html outputDirectory="coverage/logs/html" lowUpperBound="50" highLowerBound="90"/>
+            <xml outputDirectory="coverage/logs/xml-coverage"/>
+        </report>
+    </coverage>
+    <source>
+        <include>
+            <directory suffix=".php">src/</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">src/Exceptions/</directory>
+        </exclude>
+    </source>
+    <php>
+        <env name="XR_ENABLED" value="1" />
+    </php>
+</phpunit>

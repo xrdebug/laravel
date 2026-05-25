@@ -21,28 +21,26 @@ Laravel client library for [xrDebug](https://xrdebug.com/). This library provide
 
 ## Quickstart
 
-1. Install the package in your Laravel app:
+Install using [Composer](https://packagist.org/packages/xrdebug/laravel).
 
 ```sh
 composer require --dev xrdebug/laravel
 ```
 
-2. (Optional) Publishing the config file:
+(Optional) Publishing the config file:
 
 ```sh
 php artisan xr:publish-config
 ```
 
-This creates `xr.php` at the project root so you can tune host, port, and watcher toggles.
-
-Add `--docker` or `--homestead` flags to set the default host for those environments:
+This creates `xr.php` at the project root so you can configure host, port, and watcher toggles. Add `--docker` or `--homestead` flags to set the default host for those environments:
 
 ```sh
 php artisan xr:publish-config --docker
 php artisan xr:publish-config --homestead
 ```
 
-3. Use xrDebug helpers anywhere in your Laravel code:
+Use xrDebug helpers anywhere in your Laravel code:
 
 ```php
 xr('Hello from Laravel');

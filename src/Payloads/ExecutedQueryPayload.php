@@ -28,7 +28,7 @@ class ExecutedQueryPayload
     public function getContent(): array
     {
         $grammar = $this->query->connection->getQueryGrammar();
-        $properties = method_exists($grammar, 'substituteBindingsIntoRawSql')
+        $properties = $this->supportsSubstituteBindingsIntoRawSql($grammar)
             ? [
                 'sql' => $grammar->substituteBindingsIntoRawSql(
                     $this->query->sql,
@@ -47,5 +47,11 @@ class ExecutedQueryPayload
         }
 
         return $properties;
+    }
+
+    private function supportsSubstituteBindingsIntoRawSql(mixed $grammar): bool
+    {
+        return is_object($grammar)
+            && method_exists($grammar, 'substituteBindingsIntoRawSql');
     }
 }

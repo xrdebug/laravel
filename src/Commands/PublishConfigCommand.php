@@ -29,7 +29,7 @@ class PublishConfigCommand extends Command
         if ((new Filesystem())->exists($target)) {
             $this->error('xr.php already exists in the project root');
 
-            return self::FAILURE;
+            return 1;
         }
         copy(__DIR__ . '/../../config/xr.php', $target);
         if ($this->option('docker')) {
@@ -54,6 +54,6 @@ class PublishConfigCommand extends Command
         }
         $this->info('`xr.php` created in the project root');
 
-        return self::SUCCESS;
+        return 0;
     }
 }

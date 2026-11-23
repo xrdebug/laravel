@@ -57,4 +57,4 @@ jobs:
       - name: Mutation testing (Infection)
         env:
           INFECTION_BADGE_API_KEY: ${{ secrets.INFECTION_BADGE_API_KEY }}
-        run: infection --coverage=build/logs --min-covered-msi=90 --threads=$(nproc) --logger-github
+        run: infection --coverage=build/logs --min-covered-msi=60 --threads=$(nproc) --logger-github

@@ -1,12 +1,12 @@
 {
-    "$schema": "https://raw.githubusercontent.com/infection/infection/0.32.3/resources/schema.json",
+    "$schema": "https://raw.githubusercontent.com/infection/infection/0.35.12/resources/schema.json",
     "source": {
         "directories": [
             "src/"
         ]
     },
     "logs": {
-        "html": "coverage/logs/html/infection.html",
+        "html": "build/logs/html/infection.html",
         "stryker": {
             "report": "/^.*$/"
         }
